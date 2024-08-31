@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Welcome to <span class="hgl">BARCELONA</span></h2>
+
+    <div class="controls">
+      <label for="space"></label>
+      <input
+        type="range"
+        id="space"
+        name="space"
+        min="10"
+        max="200"
+        data-size="px"
+      />
+
+      <label for="blur"></label>
+      <input
+        type="range"
+        id="blur"
+        name="blur"
+        min="0"
+        max="35"
+        value="7"
+        data-size="px"
+      />
+
+      <label for="color"></label>
+      <input type="color" id="color" name="color" value="#f01ab3" />
+    </div>
+    <img src="campnou.jpg" />
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- 
+To combine label with input use same value for "for" and "id" attributes
+-->

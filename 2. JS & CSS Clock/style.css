@@ -1,0 +1,141 @@
+html {
+  background: url(dark.png);
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.clock {
+  width: 20rem;
+  height: 20rem;
+  border: 20px solid wheat;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 1rem;
+  /* transform: translateY(-3px); this moves division along with y-axis */
+  box-shadow: 0 0 10px 2px #d9dcde98, inset 0 0 0 3px #5d656daa,
+    inset 0 0 10px rgba(39, 40, 41, 0.615), 0 0 10px rgba(31, 3, 93, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hand {
+  width: 50%;
+  height: 3px;
+  background: whitesmoke;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+/*  
+transform Property
+The transform property applies a 2D or 3D transformation to an element. 
+The property can take several functions that allow for translation, rotation, scaling, and skewing of 
+elements. Multiple transformations can be combined by separating them with spaces.
+
+Values for transform
+
+translate: Moves an element from its current position.
+
+translateX(length): Moves the element horizontally by a specified amount.
+Example: transform: translateX(100px);
+translateY(length): Moves the element vertically by a specified amount.
+Example: transform: translateY(50%);
+translate(length, length): Moves the element both horizontally and vertically.
+Example: transform: translate(10px, 20px);
+translateZ(length): Moves the element along the z-axis (3D transformation).
+Example: transform: translateZ(30px);
+translate3d(x, y, z): Moves the element in all three directions.
+Example: transform: translate3d(50px, 20px, 30px);
+rotate: Rotates an element around a fixed point.
+
+rotate(angle): Rotates the element in 2D space.
+Example: transform: rotate(45deg);
+rotateX(angle): Rotates the element around the X-axis (3D rotation).
+Example: transform: rotateX(45deg);
+rotateY(angle): Rotates the element around the Y-axis (3D rotation).
+Example: transform: rotateY(45deg);
+rotateZ(angle): Rotates the element around the Z-axis (3D rotation, same as rotate()).
+Example: transform: rotateZ(45deg);
+rotate3d(x, y, z, angle): Rotates the element around a 3D vector.
+Example: transform: rotate3d(1, 1, 0, 45deg);
+scale: Resizes an element.
+
+scale(factor): Scales the element uniformly.
+Example: transform: scale(1.5);
+scaleX(factor): Scales the element horizontally.
+Example: transform: scaleX(2);
+scaleY(factor): Scales the element vertically.
+Example: transform: scaleY(0.5);
+scaleZ(factor): Scales the element along the Z-axis (3D scaling).
+Example: transform: scaleZ(2);
+scale3d(x, y, z): Scales the element in all three dimensions.
+Example: transform: scale3d(1.5, 2, 0.5);
+skew: Skews the element along the X and Y axes.
+
+skewX(angle): Skews the element horizontally.
+Example: transform: skewX(30deg);
+skewY(angle): Skews the element vertically.
+Example: transform: skewY(15deg);
+skew(x-angle, y-angle): Skews the element in both directions.
+Example: transform: skew(30deg, 20deg);
+perspective: Applies a perspective effect to a 3D transformed element.
+
+Example: transform: perspective(500px) rotateY(45deg);
+matrix and matrix3d: Allows for complex transformations by directly specifying a matrix.
+
+matrix(a, b, c, d, tx, ty): A 2D transformation matrix.
+Example: transform: matrix(1, 0, 0, 1, 0, 0); (identity matrix, no transformation)
+matrix3d(...): A 3D transformation matrix with 16 values.
+Example: transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10, 20, 30, 1);
+filter Property
+The filter property applies graphical effects such as blurring or color shifting to an element. It’s typically used for image manipulation but can be applied to any element.
+
+Values for filter
+blur(radius): Applies a Gaussian blur to the element. The radius defines the blur radius.
+
+Example: filter: blur(5px);
+brightness(percent): Adjusts the brightness of the element. Values greater than 100% make it brighter, while values less than 100% make it darker.
+
+Example: filter: brightness(150%);
+contrast(percent): Adjusts the contrast of the element. A value of 0% will make the element completely gray, and a value of 100% is the original contrast.
+
+Example: filter: contrast(120%);
+grayscale(percent): Converts the element to grayscale. A value of 100% is completely gray, while 0% leaves it unchanged.
+
+Example: filter: grayscale(50%);
+invert(percent): Inverts the colors of the element. A value of 100% fully inverts the colors, while 0% leaves them unchanged.
+
+Example: filter: invert(100%);
+opacity(percent): Adjusts the transparency of the element. A value of 100% is fully opaque, while 0% is fully transparent.
+
+Example: filter: opacity(75%);
+saturate(percent): Adjusts the color saturation of the element. Values over 100% increase saturation, while values below 100% decrease it.
+
+Example: filter: saturate(200%);
+sepia(percent): Applies a sepia tone to the element. A value of 100% is full sepia, while 0% leaves it unchanged.
+
+Example: filter: sepia(100%);
+drop-shadow(offset-x offset-y blur-radius color): Applies a shadow effect to the element. It works similarly to box-shadow but is a part of the filter property.
+
+Example: filter: drop-shadow(5px 5px 10px black);
+hue-rotate(angle): Rotates the hue of the element around the color wheel. A value of 0deg leaves the hue unchanged, while 360deg results in a full rotation.
+
+Example: filter: hue-rotate(180deg);
+
+*/
